@@ -1,0 +1,369 @@
+{
+  "CrestronSerialDeviceApi": {
+    "DeviceSupport": {
+      "SupportsArrowKeys": true,
+      "SupportsDisconnect": true,
+      "SupportsForwardScan": true,
+      "SupportsForwardSkip": true,
+      "SupportsHome": true,
+      "SupportsMenu": true,
+      "SupportsPause": true,
+      "SupportsPlay": true,
+      "SupportsReverseScan": true,
+      "SupportsReverseSkip": true,
+      "SupportsReconnect": true,
+      "SupportsEnter": true,
+      "SupportsClear": true,
+      "SupportsSelect": true,
+      "SupportsReturn": true,
+      "SupportsExit": true,
+      "SupportsColorButtons": true,
+      "SupportsKeypadNumber": true,
+      "SupportsKeypadBackSpace": true,
+      "SupportsReplay": true,
+      "SupportsCoolDownTime": true,
+      "SupportsWarmUpTime": true,
+      "SupportsStop": true,
+      "SupportsDiscretePower": true,
+      "SupportsFeedback": false,
+      "SupportsPowerFeedback": false,
+      "SupportsInfo": true
+    },
+    "DeviceSupport2": [],
+    "GeneralInformation": {
+      "DeviceType": "Bluray Player",
+      "Manufacturer": "Kaleidescape",
+      "BaseModel": "Kal Player",
+      "VersionDate": "2022-04-14 09:00:00.000",
+      "DriverVersion": "1.00.000.0000",
+      "SdkVersion": "2.06.002",
+      "Description": "4K Movie Player",
+      "Guid": "6C397526-921A-48D4-A135-5AF95B20BAE6",
+      "SupportedSeries": ["Kal Player"],
+      "SupportedModels": ["Kal Player"]
+    },
+    "Api": {
+      "Communication": {
+        "CommunicationType": 1,
+        "Protocol": -1,
+        "Baud": -1,
+        "Parity": -1,
+        "HwHandshake": -1,
+        "SwHandshake": -1,
+        "DataBits": 0,
+        "StopBits": -1,
+        "Port": 10000,
+        "EnableAutoPolling": false,
+        "EnableAutoReconnect": true,
+        "TimeBetweenCommands": 0,
+        "TimeBetweenCommandsOverride": 0,
+        "ResponseTimeout": 250,
+        "WaitForResponse": false,
+        "IpProtocol": 0,
+        "IsUserAdjustable": false,
+        "Authentication": {
+          "Type": "None",
+          "Required": false
+        },
+        "IsSecure": false,
+        "UserAdjustableProperties": null,
+        "DeviceId": 1
+      },
+      "PowerWaitPeriod": {
+        "UseLocalWarmupTimer": true,
+        "WarmUpTime": 10,
+        "UseLocalCooldownTimer": true,
+        "CoolDownTime": 2
+      },
+      "StandardCommands": {
+        "PowerOn": {
+          "StandardCommand": 6602,
+          "Command": "/0/LEAVE_STANDBY:",
+          "Parameters": []
+        },
+        "PowerOff": {
+          "StandardCommand": 6601,
+          "Command": "/0/ENTER_STANDBY:",
+          "Parameters": []
+        },
+        "PowerPoll": {
+          "StandardCommand": 6603,
+          "Command": "/0/GET_DEVICE_POWER_STATE:",
+          "Parameters": []
+        },
+        "Play": {
+          "StandardCommand": 12901,
+          "Command": "/1/PLAY:",
+          "Parameters": []
+        },
+        "Stop": {
+          "StandardCommand": 14000,
+          "Command": "/1/STOP:",
+          "Parameters": []
+        },
+        "Pause": {
+          "StandardCommand": 12900,
+          "Command": "/1/PAUSE:",
+          "Parameters": []
+        },
+        "Replay": {
+          "StandardCommand": 18000,
+          "Command": "/1/REPLAY:",
+          "Parameters": []
+        },
+        "ForwardSkip": {
+          "StandardCommand": 14600,
+          "Command": "/1/NEXT:",
+          "Parameters": []
+        },
+        "ReverseSkip": {
+          "StandardCommand": 14800,
+          "Command": "/1/PREVIOUS:",
+          "Parameters": []
+        },
+        "ForwardScan": {
+          "StandardCommand": 12800,
+          "Command": "/1/SCAN_FORWARD:",
+          "Parameters": []
+        },
+        "ReverseScan": {
+          "StandardCommand": 12801,
+          "Command": "/1/SCAN_REVERSE:",
+          "Parameters": []
+        },
+        "Select": {
+          "StandardCommand": 10700,
+          "Command": "/2/SELECT:",
+          "Parameters": []
+        },
+        "Return": {
+          "StandardCommand": 13800,
+          "Command": "/2/CANCEL:",
+          "Parameters": []
+        },
+        "Exit": {
+          "StandardCommand": 13800,
+          "Command": "/2/CANCEL:",
+          "Parameters": []
+        },
+        "Menu": {
+          "StandardCommand": 15200,
+          "Command": "/2/KALEIDESCAPE_MENU_TOGGLE:",
+          "Parameters": []
+        },
+        "Home": {
+          "StandardCommand": 11000,
+          "Command": "/2/GO_MOVIES:",
+          "Parameters": []
+        },
+        "TopMenu": {
+          "StandardCommand": 14400,
+          "Command": "/2/DISC_MENU:",
+          "Parameters": []
+        },
+        "Blue": {
+          "StandardCommand": 11800,
+          "Command": "/2/BLUE:",
+          "Parameters": []
+        },
+        "Green": {
+          "StandardCommand": 11801,
+          "Command": "/2/GREEN:",
+          "Parameters": []
+        },
+        "Red": {
+          "StandardCommand": 11802,
+          "Command": "/2/RED:",
+          "Parameters": []
+        },
+        "Yellow": {
+          "StandardCommand": 11803,
+          "Command": "/2/YELLOW:",
+          "Parameters": []
+        },
+        "PlayBackStatusPoll": {
+          "StandardCommand": 18800,
+          "Command": "/1/GET_PLAY_STATUS:",
+          "Parameters": []
+        },
+        "PopUpMenu": {
+          "StandardCommand": 15000,
+          "Command": "/2/BLURAY_POPUP_MENU_TOGGLE:",
+          "Parameters": []
+        },
+        "Info": {
+          "StandardCommand": 15400,
+          "Command": "/3/GO_NOW_PLAYING:",
+          "Parameters": []
+        },
+        "Enter": {
+          "StandardCommand": 10800,
+          "Command": "/2/SELECT:",
+          "Parameters": []
+        },
+        "Clear": {
+          "StandardCommand": 11200,
+          "Command": "/2/BACKSPACE:",
+          "Parameters": []
+        }
+      },
+      "CustomCommands": [
+        {
+          "Name": "Movie List",
+          "Command": "/3/GO_MOVIES:",
+          "Parameters": []
+        },
+        {
+          "Name": "Music List",
+          "Command": "/3/GO_MUSIC:",
+          "Parameters": []
+        },
+        {
+          "Name": "Intermission",
+          "Command": "/3/INTERMISSION_TOGGLE:",
+          "Parameters": []
+        },
+        {
+          "Name": "Shuffle",
+          "Command": "/3/SHUFFLE_COVER_ART:",
+          "Parameters": []
+        },
+        {
+          "Name": "Now Playing",
+          "Command": "/3/GO_NOW_PLAYING:",
+          "Parameters": []
+        },
+        {
+          "Name": "Kaleidescape Menu",
+          "Command": "/3/KALEIDESCAPE_MENU_TOGGLE:",
+          "Parameters": []
+        },
+        {
+          "Name": "Page Up",
+          "Command": "/3/PAGE_UP:",
+          "Parameters": []
+        },
+        {
+          "Name": "Page Down",
+          "Command": "/3/PAGE_DOWN:",
+          "Parameters": []
+        }
+      ],
+      "ArrowKeys": [0, 1, 2, 3],
+      "ColorButtons": [0, 1, 2, 3],
+      "Feedback": {
+        "CommandAckNak": {
+          "Ack": "",
+          "Nak": ""
+        },
+        "Header": "",
+        "PowerFeedback": {
+          "Feedback": {
+            "On": "1",
+            "Off": "0"
+          },
+          "GroupHeader": ""
+        },
+        "PlayBackStatusFeedback": {
+          "GroupHeader": ""
+        },
+        "TrackFeedback": {
+          "GroupHeader": ""
+        },
+        "ChapterFeedback": {
+          "GroupHeader": ""
+        },
+        "TrackElapsedTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "TrackRemainingTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "ChapterElapsedTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "ChapterRemainingTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "TotalElapsedTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "TotalRemainingTimeFeedback": {
+          "GroupHeader": ""
+        },
+        "EnergyStarFeedback": {
+          "Feedback": {},
+          "GroupHeader": ""
+        }
+      },
+      "AudioInOut": {
+        "Inputs": [],
+        "Outputs": [
+          {
+            "type": 400,
+            "description": "Hdmi",
+            "connector": 10,
+            "friendlyName": "Hdmi"
+          },
+          {
+            "type": 401,
+            "description": "Hdmi Digital Audio",
+            "connector": 10,
+            "friendlyName": "Hdmi Digital Audio"
+          },
+          {
+            "type": 29701,
+            "description": "Optical",
+            "connector": 20,
+            "friendlyName": "Optical"
+          },
+          {
+            "type": 29801,
+            "description": "Coax",
+            "connector": 30,
+            "friendlyName": "Coax"
+          }
+        ]
+      },
+      "VideoInOut": {
+        "Inputs": [],
+        "Outputs": [
+          {
+            "type": 400,
+            "description": "Video",
+            "connector": 20,
+            "friendlyName": "Video"
+          }
+        ]
+      }
+    },
+    "UserAttributes": [
+      {
+        "TypeName": "DeviceId",
+        "ParameterId": "ID",
+        "Label": "Device ID",
+        "Description": "The Device ID used in the API.",
+        "Persistent": true,
+        "RequiredForConnection": "Before",
+        "Data": {
+          "DataType": "String",
+          "Mask": "",
+          "DefaultValue": "01"
+        }
+      },
+      {
+        "TypeName": "MessageBox",
+        "ParameterId": "ID",
+        "Label": "Control Protocol ID",
+        "Description": "To Find Control Protocol Device ID (CPID): Enter IP Address into Browser > Settings > Components > Settings > Control",
+        "Persistent": true,
+        "RequiredForConnection": "Before",
+        "Data": {
+          "DataType": "",
+          "Mask": "",
+          "DefaultValue": ""
+        }
+      }
+    ]
+  }
+}
