@@ -100,7 +100,7 @@ namespace BlurayPlayer_Kaleidescape_IP
             return _taps <= 4 ? _values[_currentKey, _taps] : _values[_currentKey, 0];
         }
 
-        protected virtual void OnKeyPressed(string key)
+        private void OnKeyPressed(string key)
         {
             DriverLog.Log(Logging, LoggingLevel.Debug, "OnKeyPressed", $"Key={key}");
             //set out of range 
