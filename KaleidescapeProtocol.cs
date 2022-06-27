@@ -1,4 +1,5 @@
-﻿using Crestron.RAD.Common.BasicDriver;
+﻿using System;
+using Crestron.RAD.Common.BasicDriver;
 using Crestron.RAD.Common.Enums;
 using Crestron.RAD.Common.Logging;
 using Crestron.RAD.Common.Transports;
@@ -31,7 +32,6 @@ namespace BlurayPlayer_Kaleidescape_IP
 
         protected override void ConnectionChanged(bool connection)
         {
-            // IsConnected = connection;
             DriverLog.Log(EnableLogging, LoggingLevel.Debug, "ConnectionChanged", connection.ToString());
 
             base.ConnectionChanged(connection);
@@ -67,6 +67,8 @@ namespace BlurayPlayer_Kaleidescape_IP
                     cmd = "/1/UP_RELEASE:";
                     commandEnum = StandardCommandsEnum.UpArrow;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
 
             SendCommand(new CommandSet(
@@ -100,6 +102,8 @@ namespace BlurayPlayer_Kaleidescape_IP
                     cmd = "/1/UP_PRESS:";
                     commandEnum = StandardCommandsEnum.UpArrow;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
 
             SendCommand(new CommandSet(
@@ -132,6 +136,8 @@ namespace BlurayPlayer_Kaleidescape_IP
                     cmd = "/1/UP:";
                     commandEnum = StandardCommandsEnum.UpArrow;
                     break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
 
             SendCommand(new CommandSet(
@@ -170,7 +176,7 @@ namespace BlurayPlayer_Kaleidescape_IP
             SendKeyCommand(e1);
         }
 
-        //add cpid to command
+        //add cpid to commands
         protected override bool PrepareStringThenSend(CommandSet commandSet)
         {
             commandSet.Command = $"{_deviceId}{commandSet.Command}\r\n";
@@ -189,24 +195,22 @@ namespace BlurayPlayer_Kaleidescape_IP
             DriverLog.Log(EnableLogging,  LoggingLevel.Debug, "SetUserAttribute", attributeValue);
             if (attributeId != "ID") return;
             var valid = int.TryParse(attributeValue, out var idVal);
-            if (valid)
+            if (!valid)
             {
-                if (idVal >= 01 && idVal <= 99)
-                {
-                    _deviceId = attributeValue;
-                }
-                else
-                {
-                    DriverLog.Log(EnableLogging,  LoggingLevel.Error, "SetUserAttribute",
-                        "Attribute value is out of range.");
-                }
+                DriverLog.Log(EnableLogging,  LoggingLevel.Error, "SetUserAttribute",
+                    "Attribute value is not valid.");
+                return;
+            }
+            
+            if (idVal >= 01 && idVal <= 99)
+            {
+                _deviceId = attributeValue;
             }
             else
             {
                 DriverLog.Log(EnableLogging,  LoggingLevel.Error, "SetUserAttribute",
-                    "Attribute value is not valid.");
+                    "Attribute value is out of range.");
             }
-            
         }
         private class KaleidescapeValidator : ResponseValidation
         {
