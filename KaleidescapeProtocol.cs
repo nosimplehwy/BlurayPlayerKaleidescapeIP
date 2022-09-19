@@ -38,7 +38,7 @@ namespace BlurayPlayer_Kaleidescape_IP
         }
 
         //TODO
-        //add page up/dn to chan buttons, exit and last should do something
+        //add page up/dn to chan buttons
         //GetPowerState
 
         //Enter Standby
