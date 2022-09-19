@@ -27,7 +27,9 @@
       "SupportsDiscretePower": true,
       "SupportsFeedback": false,
       "SupportsPowerFeedback": false,
-      "SupportsInfo": true
+      "SupportsInfo": true,
+      "SupportsTopMenu": true,
+      "SupportsPopupMenu": true
     },
     "DeviceSupport2": [],
     "GeneralInformation": {
@@ -35,7 +37,7 @@
       "Manufacturer": "Kaleidescape",
       "BaseModel": "Kal Player",
       "VersionDate": "2022-04-14 09:00:00.000",
-      "DriverVersion": "1.00.000.0000",
+      "DriverVersion": "1.00.000.0001",
       "SdkVersion": "2.06.002",
       "Description": "4K Movie Player",
       "Guid": "6C397526-921A-48D4-A135-5AF95B20BAE6",
@@ -148,7 +150,7 @@
         },
         "Menu": {
           "StandardCommand": 15200,
-          "Command": "/2/KALEIDESCAPE_MENU_TOGGLE:",
+          "Command": "/2/DISC_OR_KALEIDESCAPE_MENU:",
           "Parameters": []
         },
         "Home": {
@@ -231,11 +233,6 @@
         {
           "Name": "Now Playing",
           "Command": "/3/GO_NOW_PLAYING:",
-          "Parameters": []
-        },
-        {
-          "Name": "Kaleidescape Menu",
-          "Command": "/3/KALEIDESCAPE_MENU_TOGGLE:",
           "Parameters": []
         },
         {
