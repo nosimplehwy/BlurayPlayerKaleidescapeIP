@@ -20,7 +20,6 @@ namespace BlurayPlayer_Kaleidescape_IP
             {
                 StandardCommandsEnum.PowerPoll
             };
-
             _keypad = new MultiTapKeypad();
             _keypad.KeyPressed += KeypadOnKeyPressed;
         }
@@ -150,6 +149,7 @@ namespace BlurayPlayer_Kaleidescape_IP
                 commandEnum));
         }
 
+        
         public override void KeypadNumber(uint num)
         {
             DriverLog.Log(EnableLogging,LoggingLevel.Debug, "KeypadNumber", num.ToString());
