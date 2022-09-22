@@ -12,7 +12,6 @@ namespace BlurayPlayer_Kaleidescape_IP
 
         public void Initialize(IPAddress ipAddress, int port)
         {
-            EnableLogging = true;
             var tcpTransport = new TcpTransport()
             {
                 EnableAutoReconnect = EnableAutoReconnect,
