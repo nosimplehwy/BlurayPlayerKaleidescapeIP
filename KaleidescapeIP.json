@@ -28,8 +28,7 @@
       "SupportsFeedback": false,
       "SupportsPowerFeedback": false,
       "SupportsInfo": true,
-      "SupportsTopMenu": true,
-      "SupportsPopupMenu": true
+      "SupportsTopMenu": true
     },
     "DeviceSupport2": [],
     "GeneralInformation": {
@@ -115,12 +114,12 @@
         },
         "ForwardSkip": {
           "StandardCommand": 14600,
-          "Command": "/1/NEXT:",
+          "Command": "/1/PAGE_DOWN_OR_NEXT:",
           "Parameters": []
         },
         "ReverseSkip": {
           "StandardCommand": 14800,
-          "Command": "/1/PREVIOUS:",
+          "Command": "/1/PAGE_UP_OR_PREVIOUS:",
           "Parameters": []
         },
         "ForwardScan": {
@@ -160,37 +159,32 @@
         },
         "TopMenu": {
           "StandardCommand": 14400,
-          "Command": "/2/DISC_MENU:",
+          "Command": "/2/DISC_TOP_MENU:",
           "Parameters": []
         },
         "Blue": {
           "StandardCommand": 11800,
-          "Command": "/2/BLUE:",
+          "Command": "/2/FILTER_LIST:",
           "Parameters": []
         },
         "Green": {
           "StandardCommand": 11801,
-          "Command": "/2/GREEN:",
+          "Command": "/3/INTERMISSION_TOGGLE:",
           "Parameters": []
         },
         "Red": {
           "StandardCommand": 11802,
-          "Command": "/2/RED:",
+          "Command": "/3/SHUFFLE_COVER_ART:",
           "Parameters": []
         },
         "Yellow": {
           "StandardCommand": 11803,
-          "Command": "/2/YELLOW:",
+          "Command": "/2/DISC_TOP_MENU:",
           "Parameters": []
         },
         "PlayBackStatusPoll": {
           "StandardCommand": 18800,
           "Command": "/1/GET_PLAY_STATUS:",
-          "Parameters": []
-        },
-        "PopUpMenu": {
-          "StandardCommand": 15000,
-          "Command": "/2/BLURAY_POPUP_MENU_TOGGLE:",
           "Parameters": []
         },
         "Info": {
